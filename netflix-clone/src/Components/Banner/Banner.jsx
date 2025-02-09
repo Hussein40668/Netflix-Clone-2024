@@ -2,7 +2,8 @@ import React from "react";
 import { useEffect, useState } from "react";
 import './Banner.css'
  import axios from "../../Utils/axios"
- import requests from "../../Utils/requests"
+import requests from "../../Utils/requests"
+
 
 const Banner = () => {
   const [movie, setMovie] = useState({});
@@ -47,7 +48,9 @@ const Banner = () => {
         </h1>
 
         <div className="banner-buttons">
-          <button className="banner-button play">Play</button>
+          <button className="banner-button play">
+            Play 
+          </button>
           <button className="banner-button">My List</button>
         </div>
 

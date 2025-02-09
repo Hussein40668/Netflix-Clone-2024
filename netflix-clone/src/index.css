@@ -1,4 +1,4 @@
-/* @import url(`https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap`); */
+
 
 :root {
     --font-base: 'Lexend', sans-serif;
@@ -17,4 +17,8 @@
 
 body{
     background-color: #111;
+}
+li:hover{
+   opacity: 0.95; 
+   color: rgb(55, 131, 197);
 }
