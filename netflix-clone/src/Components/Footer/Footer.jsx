@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
 
         <div className="copy-write">
-          &copy; 1997-2024 Netflix, Inc. All rights reserved.
+          &copy; 1997-2024 Netflix, Inc.  All rights reserved.
         </div>
       </div>
     </div>

@@ -4,17 +4,15 @@ import './Banner.css'
  import axios from "../../Utils/axios"
 import requests from "../../Utils/requests"
 
-
 const Banner = () => {
   const [movie, setMovie] = useState({});
   
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const request = await axios.get(requests.fetchNetflixOriginals); 
-              // axios ~ data
+                const request = await axios.get(requests.fetchNetflixOriginals);
 
-              // console.log(request);
+              //  console.log(request);
               
                 setMovie(request.data.results[
                     Math.floor(Math.random() * request.data.results.length)
@@ -28,6 +26,7 @@ const Banner = () => {
         fetchData();
 
     }, [])
+  
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + '...' : str;
   }
@@ -49,7 +48,7 @@ const Banner = () => {
 
         <div className="banner-buttons">
           <button className="banner-button play">
-            Play 
+            Play
           </button>
           <button className="banner-button">My List</button>
         </div>
@@ -63,3 +62,7 @@ const Banner = () => {
 };
 
 export default Banner;
+
+
+
+

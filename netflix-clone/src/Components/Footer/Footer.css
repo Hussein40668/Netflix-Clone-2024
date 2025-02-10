@@ -6,15 +6,14 @@
 }
 .footer-inner-container{
     width: 60%;
-    /* background-color: red; */
 }
 .footer-icons{
-    /* background-color: blue; */
     width: 12%;
     display:flex;
     justify-content: space-between;
     margin-left: 10px;
     margin-bottom: 15px;
+     cursor: pointer;
     color: #fff;
 }
 .footer-data{
@@ -27,8 +26,7 @@ justify-content: space-between;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 12vh;
-    /* background-color: aqua; */
+    height: 17vh;
 }
 
 .footer-data{
@@ -39,11 +37,11 @@ justify-content: space-between;
     align-items: center;
     justify-content: center;
     border: #fff 1px solid;
-    width: 12%;
-    margin: 10px 0;
+    width: 15%;
+    margin: 15px 0;
     cursor: pointer;
 }
 .copy-write{
     font-size: 12px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }

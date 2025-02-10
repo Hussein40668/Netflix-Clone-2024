@@ -1,5 +1,4 @@
 
-
 :root {
     --font-base: 'Lexend', sans-serif;
     --font-second-base: 'Inter', sans-serif;
@@ -7,7 +6,6 @@
     --primary-color: #ffffff;
     --secondary-color: #e50914;
 }
-
 
 *{
     margin: 0;
