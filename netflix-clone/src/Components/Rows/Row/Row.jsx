@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from "react";
-import "./Row.css";
+import styles from "./Row.module.css";
 import axios from "../../../Utils/axios";
 import movieTrailer from "movie-trailer"; // youtube -url
 import YouTube from "react-youtube";
@@ -46,9 +46,9 @@ const Row = ({ title, fetchUrl, islargeRow }) => {
   };
 
   return (
-    <div className="row">
-      <h1>{title}</h1>
-      <div className="row-posters">
+    <div className={styles.row}>
+      <h1 className={styles.title}>{title}</h1>
+      <div className={styles.row_posters}>
         {movies?.map((movie, index) => (
           <img
             onClick={() => handleClick(movie)}
@@ -57,12 +57,14 @@ const Row = ({ title, fetchUrl, islargeRow }) => {
               islargeRow ? movie.poster_path : movie.backdrop_path
             }`}
             alt={movie.name}
-            className={`row-poster ${islargeRow && "row-posterLarge"}`}
+            className={`${styles.row_poster} ${
+              islargeRow ? styles.row_posterLarge : ""
+            }`}
           />
         ))}
       </div>
 
-      <div style={{ padding: "5px" }}>
+      <div style={{ padding: "0px" }}>
         {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
       </div>
     </div>

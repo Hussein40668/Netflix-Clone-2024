@@ -1,19 +1,19 @@
 import React from 'react'
-import "./Footer.css"
+import styles from "./Footer.module.css"
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 
 const Footer = () => {
   return (
-    <div className="footer-outer-container">
-      <div className="footer-inner-container">
-        <div className="footer-icons">
+    <div className={styles.footer_outer_container}>
+      <div className={styles.footer_inner_container}>
+        <div className={styles.footer_icons}>
           <FacebookOutlinedIcon />
           <InstagramIcon />
           <YouTubeIcon />
         </div>
-        <div className="footer-data">
+        <div className={styles.footer_data}>
           <ul>
             <li>Audio Description</li>
             <li>Investor Relations</li>
@@ -45,11 +45,11 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="service-code">
+        <div className={styles.service_code}>
           <p>Service Code</p>
         </div>
 
-        <div className="copy-write">
+        <div className={styles.copy_write}>
           &copy; 1997-2024 Netflix, Inc.  All rights reserved.
         </div>
       </div>

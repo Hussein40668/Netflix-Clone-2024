@@ -1,21 +1,20 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import './Banner.css'
- import axios from "../../Utils/axios"
+import styles from'./Banner.module.css'
+import axios from "../../Utils/axios"
 import requests from "../../Utils/requests"
 
 const Banner = () => {
   const [movie, setMovie] = useState({});
-  
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const request = await axios.get(requests.fetchNetflixOriginals);
+                const response = await axios.get(requests.fetchNetflixOriginals);
 
-              //  console.log(request);
+              //  console.log(response);
               
-                setMovie(request.data.results[
-                    Math.floor(Math.random() * request.data.results.length)
+                setMovie(response.data.results[
+                    Math.floor(Math.random() * response.data.results.length)
                 ]);
 
             } catch(error) {
@@ -26,37 +25,38 @@ const Banner = () => {
         fetchData();
 
     }, [])
-  
-  function truncate(str, n) {
-    return str?.length > n ? str.substr(0, n - 1) + '...' : str;
+  //console.log(movie);
+  function truncate(Tstring, num) {
+    return Tstring?.length > num ? Tstring.substr(0, num - 1) + '...' : Tstring;
   }
 
   return (
     <div
-      className="banner"
+      className={styles.banner}
       style={{
-        backgroundSize: "cover",
+        
         backgroundImage: `url('https://image.tmdb.org/t/p/original${movie?.backdrop_path}')`,
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
+        
       }}
     >
-      <div className="banner-contents">
-        <h1 className="banner-title">
+      <div className={styles.banner_contents}>
+        <h1 className={styles.banner_title}>
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
 
-        <div className="banner-buttons">
-          <button className="banner-button play">
+        <div className={styles.banner_buttons}>
+          <button className={`${styles.banner_button} ${styles.play}`}>
             Play
           </button>
-          <button className="banner-button">My List</button>
+          <button className={styles.banner_button}>My List</button>
         </div>
 
-        <h1 className="banner-description">{truncate(movie?.overview, 150)}</h1>
+        <h1 className={styles.banner_description}>
+          {truncate(movie?.overview, 150)}
+        </h1>
       </div>
 
-      <div className="banner-fadeBottom"> </div>
+      <div className={styles.banner_fadeBottom}> </div>
     </div>
   );
 };

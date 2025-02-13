@@ -1,20 +1,21 @@
-.header-outer-container{
+.header_outer_container{
     position:sticky;
     top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: transparent;
+    /* background-color: transparent; */
+    background-color: black;
     height: 10vh;
     color: white;
 }
-.header-container{
+.header_container{
     width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.right-header ul{
+.right_header ul{
 width: 150%;
 display: flex;
 justify-content: space-around;
@@ -22,12 +23,14 @@ list-style: none;
 cursor: pointer;
 }
 
-.left-header ul{
+.left_header ul{
 width: 140%;
 display: flex;
+font-size: 0.9rem;
 justify-content: space-between;
 align-items: center;
 list-style: none;
 cursor: pointer;
 }
+
  

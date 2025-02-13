@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header.css";
+import styles from "./Header.module.css";
 import NetflixLogo from"../../assets/images/netflix-3.svg"
 import SearchIcon from "@mui/icons-material/Search";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
@@ -9,9 +9,9 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 const Header = () => {
   return (
     <>
-      <div className="header-outer-container">
-        <div className="header-container">
-          <div className="left-header">
+      <div className={`${styles.header_outer_container}`}>
+        <div className={styles.header_container}>
+          <div className={styles.left_header}>
             <ul>
               <li><img src={NetflixLogo} alt='Netflex-Logo' width="100"/></li>
               <li>Home</li>
@@ -23,7 +23,7 @@ const Header = () => {
             </ul>
           </div>
 
-          <div className="right-header">
+          <div className={styles.right_header}>
             <ul>
               <li> <SearchIcon /></li>
               <li><NotificationsNoneIcon /> </li>
