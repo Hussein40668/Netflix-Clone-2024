@@ -10,9 +10,9 @@
 
 body{
     background-color: #111;
-    font-family: "inter";
-   
+    font-family: "Lexend"; 
 }
+
 li:hover{
    opacity: 0.95; 
    color: rgb(55, 131, 197);

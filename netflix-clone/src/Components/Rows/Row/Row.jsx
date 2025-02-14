@@ -7,8 +7,10 @@ import YouTube from "react-youtube";
 
 const Row = ({ title, fetchUrl, islargeRow }) => {
   const [movies, setMovies] = useState([]);
+  
   const [trailerUrl, setTrailerUrl] = useState("");
-  const base_url = "https://image.tmdb.org/t/p/original";
+
+  const singleImageBase_Url = "https://image.tmdb.org/t/p/original";
 
   useEffect(() => {
     (async () => {
@@ -53,10 +55,11 @@ const Row = ({ title, fetchUrl, islargeRow }) => {
           <img
             onClick={() => handleClick(movie)}
             key={index}
-            src={`${base_url}${
+            src={`${singleImageBase_Url}${
               islargeRow ? movie.poster_path : movie.backdrop_path
             }`}
             alt={movie.name}
+
             className={`${styles.row_poster} ${
               islargeRow ? styles.row_posterLarge : ""
             }`}
