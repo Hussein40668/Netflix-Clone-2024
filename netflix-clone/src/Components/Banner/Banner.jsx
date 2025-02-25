@@ -20,12 +20,12 @@ const Banner = () => {
             } catch(error) {
                 console.log("error", error);
             }
-
-        };
+      };
+      
         fetchData();
 
     }, [])
-  //console.log(movie);
+ // console.log(movie);
   function truncate(Tstring, num) {
     return Tstring?.length > num ? Tstring.substr(0, num - 1) + '...' : Tstring;
   }

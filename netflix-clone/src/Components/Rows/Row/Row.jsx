@@ -6,9 +6,9 @@ import movieTrailer from "movie-trailer"; // youtube -url
 import YouTube from "react-youtube";
 
 const Row = ({ title, fetchUrl, islargeRow }) => {
-  const [movies, setMovies] = useState([]);
-  
-  const [trailerUrl, setTrailerUrl] = useState("");
+  const [movies, setMovies] = useState([]); // Stores the fetched list of movies
+
+  const [trailerUrl, setTrailerUrl] = useState(""); //Stores the YouTube trailer video ID
 
   const singleImageBase_Url = "https://image.tmdb.org/t/p/original";
 
@@ -33,6 +33,7 @@ const Row = ({ title, fetchUrl, islargeRow }) => {
       movieTrailer(movie?.title || movie?.name || movie?.original_name)
         .then((url) => {
           const urlParams = new URLSearchParams(new URL(url).search);
+         // console.log(urlParams.get("v"));
           setTrailerUrl(urlParams.get("v"));
         })
         .catch((error) => console.log("Trailer not found", error));
@@ -59,7 +60,6 @@ const Row = ({ title, fetchUrl, islargeRow }) => {
               islargeRow ? movie.poster_path : movie.backdrop_path
             }`}
             alt={movie.name}
-
             className={`${styles.row_poster} ${
               islargeRow ? styles.row_posterLarge : ""
             }`}
