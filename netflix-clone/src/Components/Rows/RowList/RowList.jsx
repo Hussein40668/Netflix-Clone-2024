@@ -14,7 +14,7 @@ const RowList = () => {
       <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
       <Row title="Top Rated" fetchUrl={requests.fetchTopRatedMovies} />
       <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
-      <Row title="ComedyMovies" fetchUrl={requests.fetchComedyMovies} />
+      <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
       <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
       <Row title="History Movies" fetchUrl={requests.fetchHistoryMovies} />
       <Row title="Family Movies" fetchUrl={requests.fetchFamilyMovies} />
